@@ -9,8 +9,8 @@ int main() {
         printf("roots are not possible");
     }
     else{
-    float r1=(-b+sqrt(d))/2*a;
-    float r2=(-b-sqrt(d))/2*a;
+    float r1=(-b+sqrt(d))/(2*a);
+    float r2=(-b-sqrt(d))/(2*a);
     printf("%.1f",r1);
     printf("%.1f",r2);
     }
