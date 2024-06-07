@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+while(1){
+    printf("Enter your name");
+    char name[30];
+    scanf("%s",name);
+    printf("enter father name");
+    char fname[30];
+    scanf("%s",fname);
+    printf("enter branch\n");
+    char branch[3];
+    scanf("%s",branch);
+    printf("enter marital status 1 for single 2 for married \n");
+    int a;
+    scanf("%d",&a);
+    if(a==1)
+       continue;
+    printf("enter spouse name\n");
+    char sname[30];
+    scanf("%s",sname);
+    printf("enter no of children\n");
+    int b;
+    scanf("%d",&b);
+    printf("enter another record(y/n)\n");
+    char ch;
+    fflush(stdin);
+    scanf("%c",ch);
+    if(ch=='n' || ch=='N')
+        break;
+}
+    return 0;
+}
