@@ -1,0 +1,14 @@
+#include <stdio.h>
+void m1(int c){
+    if(c<=10){
+        printf("good morning\n");
+        c++;
+        m1(c);
+    }
+    }
+    int main() {
+        int c=1;
+        m1(c);
+
+    return 0;
+}
