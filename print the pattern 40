@@ -1,0 +1,106 @@
+Print the pattern
+
+Input Format
+
+Read no of rows
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+print pattern
+
+Sample Input 0
+
+5
+Sample Output 0
+
+*****
+ ****
+  ***
+   **
+    *
+Sample Input 1
+
+10
+Sample Output 1
+
+**********
+ *********
+  ********
+   *******
+    ******
+     *****
+      ****
+       ***
+        **
+         *
+Sample Input 2
+
+13
+Sample Output 2
+
+*************
+ ************
+  ***********
+   **********
+    *********
+     ********
+      *******
+       ******
+        *****
+         ****
+          ***
+           **
+            *
+Submissions: 24
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+;
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+  int n,i,j,k;
+8
+    scanf("%d",&n);
+9
+    for(i=n;i>=1;i--){
+10
+        for(k=i;k<=n-1;k++)
+11
+        
+12
+            printf(" ");
+13
+        for(j=1;j<=i;j++){
+14
+            printf("*");
+15
+        }
+16
+        printf("\n");
+17
+        
+18
+    }
+19
+    return 0;
+20
+}
