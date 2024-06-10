@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+
+  int fn(int n)
+    {
+        if(n>100)
+        return n-10;
+        return fn(fn(n+11));
+    }
+    int main() {
+       int k=fn(95);
+       printf("%d",k);
+    return 0;
+}
+   
