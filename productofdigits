@@ -1,0 +1,50 @@
+A supermarket maintains a pricing format for all its products. A value N is printed on each product. When the scanner reads the value N on the item, the product of all the digits in the value N is the price of the item. The task here is to design the software such that given the code of any item N the product (multiplication) of all the digits of value should be computed(price).
+
+Input Format
+
+Read n value
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Product of digits
+
+Sample Input 0
+
+5244
+Sample Output 0
+
+160
+Sample Input 1
+
+32650
+Sample Output 1
+
+180
+
+// source code
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,r=1,digit;
+    scanf("%d",&n);
+    while(n>0){
+        digit=n%10;
+        if(digit!=0){
+            r*=digit;
+        }
+        n=n/10;
+    }
+    printf("%d\n",r);
+    return 0;
+}
+
+
+ 
