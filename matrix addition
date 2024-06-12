@@ -1,0 +1,83 @@
+Write a program for Matrix Addition
+
+Input Format
+
+Enter row size Enter column size Enter elements for first matrix line by line Enter elements for second matrix line by line
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Addition of a matrix
+
+Sample Input 0
+
+2
+2
+1
+2
+3
+4
+1
+2
+3
+4
+Sample Output 0
+
+2 4
+6 8
+Sample Input 1
+
+2
+3
+1
+2
+3
+4
+5
+6
+6
+5
+4
+3
+2
+1
+Sample Output 1
+
+7 7 7
+7 7 7
+
+\\source code
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ int m,n;
+    scanf("%d%d",&m,&n);
+   int a[m][n],b[m][n],i,j,sum[m][n];
+   for(i=0;i<m;i++){
+       for(j=0;j<n;j++){
+           scanf("%d",&a[i][j]);
+           }
+   }
+    for(i=0;i<m;i++){
+       for(j=0;j<n;j++){
+           scanf("%d",&b[i][j]);
+           }
+   }
+    
+     for(i=0;i<m;i++){
+       for(j=0;j<n;j++){
+          sum[i][j]=a[i][j]+b[i][j];
+           printf("%d ",sum[i][j]);
+       }
+         printf("\n");
+     }
+    
+    return 0;
+}
