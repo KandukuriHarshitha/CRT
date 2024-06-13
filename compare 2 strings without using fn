@@ -8,14 +8,21 @@ scanf("%s",s);
 int n1,n2;
 for(n1=0;str[n1]!='\0';n1++);
 for(n2=0;s[n2]!='\0';n2++);
-if(n1==n2){
-    printf("Same");
-}
+if(n1!=n2){
+    printf(" not Same");
+} 
 else{
-    printf("Not same");
-}
- 
- 
-
+    for(i=0;i<n1;i++){
+        if(str[i]!=s[i]){
+            printf("not same");
+            break;
+        }
+        
+    }
+    if(i==n1){
+        printf("same");
+    }
+    
+    }
 return 0;
 }
