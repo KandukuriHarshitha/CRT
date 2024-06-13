@@ -1,0 +1,51 @@
+Read a stirng and convert upper case into lower case and vice versa
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Print result string
+
+Sample Input 0
+
+Java Language
+Sample Output 0
+
+jAVA lANGUAGE
+Sample Input 1
+
+pYtHOn Is SIMPLE language
+Sample Output 1
+
+PyThoN iS simple LANGUAGE
+\\souce code
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+       char s[50];
+    scanf("%[^\n]s",s);
+    int i;
+    for(i=0;s[i]!='\0';i++){
+        if(s[i]>='a' && s[i]<='z'){
+            s[i]=s[i]-32;
+        }
+        else if(s[i]>='A' && s[i]<='Z'){
+            s[i]=s[i]+32;
+        }
+        else{
+            printf("");
+        }
+    }
+    printf("%s",s); 
+    return 0;
+}
