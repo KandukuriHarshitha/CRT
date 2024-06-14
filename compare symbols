@@ -1,0 +1,61 @@
+Given a string S(input consisting) of ‘’ and ‘#’. The length of the string is variable. The task is to find the minimum number of ‘’ or ‘#’ to make it a valid string. The string is considered valid if the number of ‘’ and ‘#’ are equal. The ‘’ and ‘#’ can be at any position in the string.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+(>#): positive integer (#>): negative integer (#=*): 0
+
+Sample Input 0
+
+###***
+Sample Output 0
+
+0
+Sample Input 1
+
+**###*##*###
+Sample Output 1
+
+-4
+\\source code
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+char str[200];
+    scanf("%s",str);
+    int i,c=0,v=0,s;
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]=='#'){
+            c++;
+        }
+        else{
+            v++;
+        }
+    }
+
+        if(c==v){
+            printf("0");
+        }
+        else if(c>v){
+            s=v-c;
+            printf("%d",s);
+            
+        }
+else{
+    int d=c-v;
+    printf("%d",d);
+}
+    
+    return 0;
+}
