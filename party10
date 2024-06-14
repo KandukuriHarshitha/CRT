@@ -1,0 +1,62 @@
+A party has been organised on cruise. The party is organised for a limited time(T). The number of guests entering (E[i]) and leaving (L[i]) the party at every hour is represented as elements of the array. The task is to find the maximum number of guests present on the cruise at any given instance within T hours.
+
+Input Format
+
+Read size of the array Read elements for in-guest array Read elements for out-guest array
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print highest guests available in a party based on hours
+
+Sample Input 0
+
+5
+7 0 5 1 3 
+1 2 1 3 4   
+Sample Output 0
+
+8
+Explanation 0
+
+1st hour: Entry : 7 Exit: 1 No. of guests on ship : 6 2nd hour : Entry : 0 Exit : 2 No. of guests on ship : 6-2=4 Hour 3: Entry: 5 Exit: 1 No. of guests on ship : 4+5-1=8 Hour 4: Entry : 1 Exit : 3 No. of guests on ship : 8+1-3=6 Hour 5: Entry : 3 Exit: 4 No. of guests on ship: 6+3-4=5 Hence, the maximum number of guests within 5 hours is 8.
+
+Sample Input 1
+
+4
+3 5 2 0
+0 2 4 4
+Sample Output 1
+
+6
+\\source code
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n;
+    scanf("%d",&n);
+    int a[n],b[n],i,guests=0,max=0;
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++){
+        scanf("%d",&b[i]);
+    }
+    for(i=0;i<n;i++){
+        guests+=a[i]-b[i];
+        if(guests>max){
+            max=guests;
+        }
+        
+    }
+    printf("%d",max);
+     
+    return 0;
+}
