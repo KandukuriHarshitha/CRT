@@ -1,0 +1,26 @@
+sample input
+5
+6 2 4 7 10
+sample output
+3
+which building sunrises first assume that sunrise starts from array first element
+
+
+import java.util.*;
+class Test{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+ int n=s.nextInt();
+int a[]=new int[n];
+int count=1;
+for(int i=0;i<n;i++){
+a[i]=s.nextInt();
+}
+for(int i=0;i<n;i++){
+ if(a[0]>a[i]){
+ count++;
+}
+}
+System.out.println(count);
+}
+}
