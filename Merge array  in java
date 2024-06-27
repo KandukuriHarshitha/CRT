@@ -15,20 +15,35 @@ b[j]=sc.nextInt();
 int p=m+n;
 int c[]=new int[p];
 int k=0,i=0,j=0;
-while(i<m && j<m){
-c[k]=a[i]
+while(i<n && j<m){
+if(a[i]<b[j]){
+c[k]=a[i];
 i++;
 k++;
+}
+else{
 c[k]=b[j];
 j++;
 k++;
 }
-Arrays.sort(c);
-for(int i=0;i<p;i++){
-System.out.println(c[i]);
+}
+while(i<n){
+c[k]=a[i];
+k++;
+i++;
+}
+while(j<m){
+c[k]=b[j];
+k++;
+j++;
+}
+
+for(i=0;i<p;i++){
+System.out.print(c[i]+" ");
 }
 }
 }
+
 
 
 sample Input
